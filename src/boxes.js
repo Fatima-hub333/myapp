@@ -1,10 +1,6 @@
-/* eslint-disable no-unused-vars */
-import React from 'react'
-
-const boxes = () => {
-  return (
-		[
-			{
+/* eslint-disable import/no-anonymous-default-export */
+export default [
+    {
         id: 1,
         on: true
     },   
@@ -27,11 +23,5 @@ const boxes = () => {
     {
         id: 6,
         on: false
-    },
-      
-      
-      ]
-  )
-}
-
-export default boxes
+    },   
+]
