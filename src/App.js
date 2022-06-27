@@ -1,4 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
+import Star from './Star'
 import './index.css'
 
 export default function App() {
@@ -7,10 +9,10 @@ export default function App() {
     lastName: "Zahir",
     phone: "+92 347 7871262",
     email: "fatimaazahir@gmail.com",
-    isFavorite: false
+    isFavorite: true
   })
 
-  let starIcon = contact.isFavorite ? "star-filled.png" : "star-empty.png"
+  // eslint-disable-next-line no-unused-vars
 
   function toggleFavorite() {
     setContact(prevContact => ({
@@ -24,10 +26,7 @@ export default function App() {
       <article className="card">
         <img src="../images/user.png" className="card--image" />
         <div className="card--info">
-          <img src={`../images/${starIcon}`}
-            className="card--favorite"
-            onClick={toggleFavorite}
-          />
+          <Star isFilled={contact.isFavorite} handleClick={toggleFavorite}/>
           <h2 className="card--name">
             {contact.firstName} {contact.emaillastName}
           </h2>
