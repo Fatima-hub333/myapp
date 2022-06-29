@@ -6,19 +6,19 @@ const Joke = (props) => {
   function toggleShown() {
     setIsShown(prevShown => !prevShown)
   }
+  if () {
+    
+  }
   return (
     <div>
       {props.setup && <h3>{props.setup}</h3>}
       {isShown && <p>{props.punchline}</p>}
-      <button onClick={toggleShown}>Show Punchline</button>
+      {/* {isShown && <button onClick={toggleShown}>Hide Punchline</button>}
+      {!isShown && <button onClick={toggleShown}>Show Punchline</button>} */}
+      <button onClick={toggleShown}> { isShown ? "Hide" : "Show"}Punchline</button>
       <hr />
     </div>
   )
 }
 
-const cond1 = true
-const cond2 = true
-if (cond1 && console.log("Hello There")) {
-  
-}
 export default Joke
