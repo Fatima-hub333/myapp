@@ -8,8 +8,8 @@ export default function App() {
     const [squares, setSquares] = React.useState(boxes)
 
     function toggle(id) {
-        console.log(id)
-    }
+    console.log(id)
+}
     
     const squareElements = squares.map(square => (
         <Box 
