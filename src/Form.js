@@ -3,7 +3,7 @@ import React from 'react'
 
 const Form = () => {
   const [formData, setFormData] = React.useState(
-    { firstName: "", lastName: "" }
+    { firstName: "", lastName: "", email: ""}
   )
 console.log(formData)
   function handleChange(event) {
@@ -28,6 +28,12 @@ console.log(formData)
         placeholder='Last Name'
         onChange={handleChange}
         name="lastName"
+      />
+      <input
+        type="email"
+        placeholder="email"
+        onChange={handleChange}
+        name="email"
       />
     </form>
   )
