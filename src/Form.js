@@ -4,7 +4,7 @@ import './index.css'
 
 const Form = () => {
   const [formData, setFormData] = React.useState(
-    { firstName: "", lastName: "", email: ""}
+    { firstName: "", lastName: "", email: "", comments: ""}
   )
 
   function handleChange(event) {
@@ -38,6 +38,12 @@ const Form = () => {
         onChange={handleChange}
         name="email"
         value={formData.email}
+      />
+      <textarea
+        placeholder="comments"
+        onChange={handleChange}
+        name="comments"
+        value={formData.comments}
       />
     </form>
   )
