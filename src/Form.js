@@ -4,14 +4,21 @@ import './index.css'
 
 const Form = () => {
   const [formData, setFormData] = React.useState(
-    { firstName: "", lastName: "", email: "", comments: ""}
+    {
+      firstName: "",
+      lastName: "",
+      email: "",
+      comments: "",
+      isFriendly: true
+    }
   )
 
   function handleChange(event) {
+    const {name, value, type, checked} = event.target
     setFormData(prevFormData => {
       return {
         ...prevFormData,
-        [event.target.name]: event.target.value
+        [name]: type === "checkbox" ? checked : value
       }
     })
   }
@@ -45,6 +52,14 @@ const Form = () => {
         name="comments"
         value={formData.comments}
       />
+      <input
+        name="isFriendly"
+        type="checkbox"
+        id="isFriendly"
+        checked={formData.isFriendly}
+        onChange={handleChange}
+      />
+      <label htmlFor='isFriendly'>Are You Friendly?</label>
     </form>
   )
 }
