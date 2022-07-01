@@ -3,30 +3,56 @@
 }
 
 body {
-    background-color: #70B85D;
-    color: white;
-    padding: 20px;
-    font-family: 'Karla', sans-serif;
-    font-size: 1.3rem;
+  margin: 0;
+  background-color: #639;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
 }
 
-button {
-    width: 100%;
-    background-color: transparent;
-    padding: 1rem;
-    color: white;
-    border: 2px solid white;
-    border-radius: 50px;
-    cursor: pointer;
-    font-family: 'Karla', sans-serif;
-    margin-bottom: 20px;
+.form--container {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
 }
 
-button:hover {
-    background-color: #FFFEF1;
-    color: #2C5E2E;
+.form {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 5px 5px 15px -1px rgba(0,0,0,0.75);
 }
 
-button:focus {
-    outline: 0;
+.form--input {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  text-indent: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+.form--submit {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #639;
+  border: none;
+  cursor: pointer;
+}
+
+.form--marketing {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.form--marketing > input {
+  margin-right: 10px;
 }
