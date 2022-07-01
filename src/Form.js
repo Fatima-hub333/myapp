@@ -10,10 +10,12 @@ const Form = () => {
       email: "",
       comments: "",
       isFriendly: true,
-      employment: ""
+      employment: "",
+      favColor: ""
     }
   )
 
+  console.log(formData.favColor)
   function handleChange(event) {
     const {name, value, type, checked} = event.target
     setFormData(prevFormData => {
@@ -99,9 +101,26 @@ const Form = () => {
           checked={formData.employment === 'full-time'}
           onChange={handleChange}
         />
-
         <label htmlFor='full-time'>Full-time</label>
       </fieldset>
+      <br />
+      <label htmlFor='favColor'>What is your favorite color?</label>
+      <br />
+      <select
+        id="favColor"
+        value={formData.favColor}
+        onChange={handleChange}
+        name="favColor"
+      >
+        <option value="">--Choose--</option>
+        <option value='red'>Red</option>
+        <option value='orange'>Orange</option>
+        <option value='yellow'>Yellow</option>
+        <option value='Green'>Green</option>
+        <option value='blue'>Blue</option>
+        <option value='indigo'>Indigo</option>
+        <option value='violet'>Violet</option>
+      </select>
     </form>
   )
 }
