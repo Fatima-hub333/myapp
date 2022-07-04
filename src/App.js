@@ -8,16 +8,17 @@ const App = () => {
 
   console.log("Component Render")
   React.useEffect(function () {
-      fetch("https://swapi.dev/api/people/1")
+      fetch(`https://swapi.dev/api/people/${count}`)
        .then(res => res.json())
        .then(data => setStarWarsData(data))
-    }, [])
+    }, [count])
   
   return (
       <div>
-      <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
+      
       <h2>The count is {count}</h2>
-      <button onClick={() => setCount(prevCount => prevCount + 1)}>Add</button>
+      <button onClick={() => setCount(prevCount => prevCount + 1)}>Get Next Character</button>
+      <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
       </div>
   )
 }
