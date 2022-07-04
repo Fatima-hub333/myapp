@@ -8,11 +8,10 @@ const App = () => {
 
   console.log("Component Render")
   React.useEffect(function () {
-      console.log("Effect ran")
-      // fetch("https://swapi.dev/api/people/1")
-      //  .then(res => res.json())
-      //  .then(data => setStarWarsData(data))
-    }, [0])
+      fetch("https://swapi.dev/api/people/1")
+       .then(res => res.json())
+       .then(data => setStarWarsData(data))
+    }, [])
   
   return (
       <div>
